@@ -32,7 +32,7 @@ nav a:hover { color:var(--violet); }
 .hero p { font-size:19px; color:var(--muted); max-width:56ch; margin:0 auto; }
 .badge { display:inline-block; margin-top:28px; background:var(--gold); color:#2C1A3A;
   border:2px solid var(--outline); border-radius:26px; padding:14px 30px; font-weight:800; font-size:16px; }
-.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px; margin-top:56px; }
+.cards { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:56px; }
 .card { border:2px solid var(--outline); border-radius:18px; padding:22px; background:var(--surface); }
 .card.gold { background:var(--butter); }
 .card h3 { margin:0 0 6px; font-size:19px; font-weight:800; }
@@ -74,3 +74,9 @@ a.badge { text-decoration:none; }
 a.badge:hover { filter:brightness(1.05); }
 .android-soon { display:block; margin-top:16px; color:var(--muted); font-size:15px; font-weight:600; }
 .android-soon b { color:var(--ink); font-weight:800; }
+
+
+/* feature cards: 4 across, then 2, then 1 */
+.cards .card { padding:20px 18px; }
+@media (max-width:820px){ .cards { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:480px){ .cards { grid-template-columns:1fr; } }
