@@ -1,10 +1,8 @@
 :root {
-  --bg:#FDFBFF; --surface:#EFE6FA; --butter:#FDF3D8; --ink:#2C1A3A; --muted:#5C4A70;
-  --violet:#8A55E8; --gold:#F2B72E; --pink:#EE59C5; --outline:#2C1A3A; --divider:#ECE2F6;
-}
-@media (prefers-color-scheme: dark) {
-  :root { --bg:#221530; --surface:#33224A; --butter:#3A2C20; --ink:#F3ECFC; --muted:#CBB8DD;
-    --violet:#C9A4FF; --outline:#8A68B8; --divider:#33254A; }
+  /* Dark-only, matching the app's Chromatic Pop dark theme */
+  color-scheme: dark;
+  --bg:#221530; --surface:#33224A; --butter:#282457; --ink:#F3ECFC; --muted:#CBB8DD;
+  --violet:#C9A4FF; --gold:#F2B72E; --pink:#EE59C5; --outline:#8A68B8; --divider:#33254A;
 }
 * { box-sizing: border-box; }
 html, body { overflow-x: hidden; }
@@ -69,3 +67,10 @@ a { color:var(--violet); }
   .hero h1 { font-size: clamp(28px, 8.5vw, 40px); }
   .hero h1 br { display: none; }
 }
+
+
+/* Live store CTA in the hero */
+a.badge { text-decoration:none; }
+a.badge:hover { filter:brightness(1.05); }
+.android-soon { display:block; margin-top:16px; color:var(--muted); font-size:15px; font-weight:600; }
+.android-soon b { color:var(--ink); font-weight:800; }
